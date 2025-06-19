@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korisnik Form</title>
+    <link rel="stylesheet" href="../../dist/userForm/userForm.css">
+    <script type="module" src="../../dist/userForm/userForm.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="title">Drustvena Mreza</h1>
+        <ul class="nav-links">
+            <li><a href="../userOverview/userOverview.html">Korisnik Pregled</a></li>
+            <li><a href="../groupOverview/groupOverview.html">Grupa Pregled</a></li>
+        </ul>
+    </nav>
+
+    <h1>Korisnik Form</h1>
+
+    <div class="formDiv">
+        <form id="form">
+            <label for="username">Korisnicko Ime:</label>
+            <input id="username" name="username" type="text" />
+            <span id="usernameError"></span>
+            <br />
+
+
+            <label for="firstName">Ime:</label>
+            <input id="firstName" name="firstName" type="text" />
+            <span id="firstNameError"></span>
+            <br />
+
+            <label for="lastName">Prezime:</label>
+            <input id="lastName" name="lastName" type="text" />
+            <span id="lastNameError"></span>
+            <br />
+
+            <label for="dateOfBirth">Datum Rodjenja:</label>
+            <input id="dateOfBirth" name="dateOfBirth" type="text" />
+            <span id="dateOfBirthError"></span>
+            <br />      
+        </form>
+            <button id="submitButton">Submit</button>
+            <button id="cancelButton">Cancel</button>
+    </div>
+</body>
+
+</html>
