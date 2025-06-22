@@ -78,13 +78,22 @@ function submit(id?: string) {
       })
   }
   else {
+    const loadingGif = document.querySelector(".loading") as HTMLImageElement
+    loadingGif.style.display = "flex"
+
+    const submitButton = document.querySelector("#submitButton") as HTMLButtonElement
+    submitButton.style.backgroundColor = "gray";
+    submitButton.disabled = true
+
     userOverviewServices.add(userFormData)
       .then(() => {
-        window.location.href = '../index.html'
+        loadingGif.style.display = "none"
       }).catch(error => {
-        console.error(error.status, error.text);
+        console.error(error.status, error.message);
       })
   }
 }
+
+
 
 document.addEventListener('DOMContentLoaded', initializeForm)

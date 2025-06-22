@@ -1,5 +1,42 @@
 @import '../styles/global';
 
+.loading {
+    display: none;
+}
+
 span {
     color: $warn-color;
+}
+
+div.toolTip {
+    position: relative;
+
+    button {
+        width: 100%;
+    }
+
+
+    span.toolTipText {
+        visibility: hidden;
+        position: absolute;
+        bottom: 0%;
+        top: 20%;
+        left: 80%;
+        padding: 5px 10px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+    }
+
+    &:hover {
+
+        span.toolTipText {
+            visibility: visible;
+            transition-delay: 0.6s;
+            opacity: 1;
+        }
+    }
 }
