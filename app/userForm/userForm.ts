@@ -88,8 +88,11 @@ function submit(id?: string) {
     userOverviewServices.add(userFormData)
       .then(() => {
         loadingGif.style.display = "none"
+        submitButton.disabled = false
       }).catch(error => {
         console.error(error.status, error.message);
+        const errorMessage2 = document.querySelector(".toolTipText2") as HTMLSpanElement
+        errorMessage2.textContent = "Došlo je do greške"
       })
   }
 }
